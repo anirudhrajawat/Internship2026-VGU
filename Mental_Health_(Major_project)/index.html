@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindful — Daily Journal</title>
+  <link rel="stylesheet" href="project_MH.css">
+</head>
+<body>
 
+  <header class="site-header">
+    <div class="logo">
+      <span class="logo-mark">◡</span>
+      <span class="logo-text">Mindful</span>
+    </div>
+    <nav class="site-nav">
+      <a href="#checkin">Check in</a>
+      <a href="#history">History</a>
+      <a href="#breathe">Breathe</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">Today · <span id="today-date">friday, July 10</span></p>
+      <h1>How are you carrying today?</h1>
+      <p class="hero-sub">One honest check-in a day. That's all this asks of you.</p>
+    </section>
+
+    <section class="checkin-card" id="checkin">
+      <h2>Log your mood</h2>
+
+      <div class="mood-scale">
+        <button class="mood-option" data-mood="joy">
+          <span class="mood-emoji">😊</span>
+          <span class="mood-label">Joyful</span>
+        </button>
+        <button class="mood-option" data-mood="calm">
+          <span class="mood-emoji">🙂</span>
+          <span class="mood-label">Calm</span>
+        </button>
+        <button class="mood-option" data-mood="neutral">
+          <span class="mood-emoji">😐</span>
+          <span class="mood-label">Neutral</span>
+        </button>
+        <button class="mood-option" data-mood="low">
+          <span class="mood-emoji">😔</span>
+          <span class="mood-label">Low</span>
+        </button>
+        <button class="mood-option" data-mood="anxious">
+          <span class="mood-emoji">😟</span>
+          <span class="mood-label">Anxious</span>
+        </button>
+      </div>
+
+      <label class="field-label" for="journal-entry">What's on your mind?</label>
+      <textarea id="journal-entry" placeholder="Write freely. No one is grading this sentence." rows="5"></textarea>
+
+      <div class="tag-row">
+        <span class="tag">#work</span>
+        <span class="tag">#sleep</span>
+        <span class="tag">#family</span>
+        <span class="tag tag-add">+ add tag</span>
+      </div>
+
+      <button class="save-btn" id="save-entry">Save today's entry</button>
+    </section>
+
+    <section class="history-preview" id="history">
+      <h2>Recent entries</h2>
+      <p class="empty-state">Nothing here yet. Your first entry will show up once you save it.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Mindful — a private space for your thoughts.</p>
+  </footer>
+
+  <script src="project_MH.js"></script>
+</body>
+</html>
